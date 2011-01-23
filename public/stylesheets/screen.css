@@ -617,7 +617,6 @@ nav ul li a.active {
   display: none;
   position: absolute;
   top: 60px;
-  left: 50%;
   margin-left: -220px;
   z-index: 5;
   background-color: rgba(255, 255, 255, 0.95);
@@ -626,30 +625,30 @@ nav ul li a.active {
   width: 320px;
   padding: 60px;
 }
-/* line 88, ../../sass/screen.scss */
+/* line 87, ../../sass/screen.scss */
 .page h1, .page h2 {
   font-size: 16px;
   margin-bottom: 1.5em;
   line-height: 24px;
 }
-/* line 93, ../../sass/screen.scss */
+/* line 92, ../../sass/screen.scss */
 .page p, .page li {
   font-size: 14px;
   margin-bottom: 1.5em;
   line-height: 18px;
 }
-/* line 98, ../../sass/screen.scss */
+/* line 97, ../../sass/screen.scss */
 .page a {
   color: black;
   text-decoration: underline;
 }
 
-/* line 104, ../../sass/screen.scss */
+/* line 103, ../../sass/screen.scss */
 a {
   color: #ff9900;
 }
 
-/* line 108, ../../sass/screen.scss */
+/* line 107, ../../sass/screen.scss */
 #left {
   position: absolute;
   z-index: 2;
@@ -660,7 +659,7 @@ a {
   cursor: w-resize;
 }
 
-/* line 118, ../../sass/screen.scss */
+/* line 117, ../../sass/screen.scss */
 #right {
   position: absolute;
   z-index: 2;
@@ -671,7 +670,7 @@ a {
   cursor: e-resize;
 }
 
-/* line 128, ../../sass/screen.scss */
+/* line 127, ../../sass/screen.scss */
 #prev_indicator {
   position: absolute;
   bottom: 10px;
@@ -686,7 +685,7 @@ a {
   background-repeat: no-repeat;
 }
 
-/* line 142, ../../sass/screen.scss */
+/* line 141, ../../sass/screen.scss */
 #next_indicator {
   position: absolute;
   bottom: 10px;

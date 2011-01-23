@@ -147,24 +147,25 @@ $(document).ready(function() {
       "!/about": "about",
       "!/pricing": "pricing",
       "!/where": "where", 
-      "!/contact": "contact"
+      "!/contact": "contact", 
+      "!/philosophy": "philosophy"
     },
 
     hide: function(callback) {
-      $(".page").animate({opacity: 0},250, callback);
+      $(".page").animate({opacity: 0},250, callback).css({display: "none", left: -20000});
     },
     swap: function(page_id) {
       var p = page_id;
       $("nav ul li a").removeClass("active");
       $(page_id + "_show").addClass("active");
       this.hide( function() { 
-        $(this).css({display: "none"});
-        $(p).css({display: "block"}).animate({opacity: 1}, 250);
+        
+        $(p).css({display: "block", left: "50%"}).animate({opacity: 1}, 250);
       });
     },
     home: function() {
       $("nav ul li a").removeClass("active");
-      $(".page").animate({opacity: 0},250);
+      this.hide();
     },
     about: function() {
       this.swap("#about");
@@ -177,6 +178,9 @@ $(document).ready(function() {
     },
     where: function() {
       this.swap("#where");
+    },
+    philosophy: function() {
+      this.swap("#philosophy");
     }
   });
   
