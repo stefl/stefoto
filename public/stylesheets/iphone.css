@@ -1,23 +1,30 @@
 /*
-Syntax error: Invalid CSS after "  top:": expected pseudoclass or pseudoelement, was " 86px;"
-        on line 31 of /files/apps/photo/sass/iphone.scss
+Syntax error: Undefined mixin 'box-sizing'.
+        on line 30 of /files/apps/photo/sass/iphone.scss, in `box-sizing'
+        from line 30 of /files/apps/photo/sass/iphone.scss
 
 Backtrace:
-/files/apps/photo/sass/iphone.scss:31
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/scss/parser.rb:838:in `expected'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/scss/parser.rb:813:in `expected'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/scss/parser.rb:796:in `expr!'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/scss/parser.rb:572:in `pseudo'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/scss/parser.rb:468:in `simple_selector_sequence'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/scss/parser.rb:443:in `_selector'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/scss/parser.rb:426:in `selector'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/scss/parser.rb:415:in `selector_sequence'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/scss/parser.rb:332:in `ruleset'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/scss/parser.rb:356:in `block_child'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/scss/parser.rb:350:in `block_contents'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/scss/parser.rb:57:in `stylesheet'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/scss/parser.rb:26:in `parse'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/engine.rb:213:in `_to_tree'
+/files/apps/photo/sass/iphone.scss:30:in `box-sizing'
+/files/apps/photo/sass/iphone.scss:30
+/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/mixin_node.rb:62:in `perform!'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `map'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:317:in `perform!'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/rule_node.rb:191:in `perform!'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `map'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:317:in `perform!'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/root_node.rb:59:in `perform!'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/root_node.rb:37:in `perform'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/root_node.rb:29:in `render'
 /Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/engine.rb:197:in `_render'
 /Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/engine.rb:169:in `render'
 /Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/haml/util.rb:294:in `silence_haml_warnings'
@@ -61,4 +68,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"  top:\": expected pseudoclass or pseudoelement, was \" 86px;\"\A         on line 31 of /files/apps/photo/sass/iphone.scss"; }
+  content: "Syntax error: Undefined mixin 'box-sizing'.\A         on line 30 of /files/apps/photo/sass/iphone.scss, in `box-sizing'\A         from line 30 of /files/apps/photo/sass/iphone.scss"; }
