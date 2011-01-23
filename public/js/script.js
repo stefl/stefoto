@@ -27,6 +27,14 @@ $(document).ready(function() {
           parent.location.hash = '!/home';
       });
       
+      $("#left").bind('mousemove', function(event) {
+          Photos.leftIndicator();
+      });
+      
+      $("#right").bind('mousemove', function(event) {
+          Photos.rightIndicator();
+      });
+      
       $("#right").bind('click', function(event) {
           Photos.next();
           parent.location.hash = '!/home';
@@ -110,6 +118,12 @@ $(document).ready(function() {
         }
       }
     },
+    leftIndicator: function() {
+      
+    },
+    rightIndicator: function() {
+      
+    },
     resize: function() {
 			var imagewidth = this.img.naturalWidth;
 			var imageheight = this.img.naturalHeight;
@@ -133,16 +147,19 @@ $(document).ready(function() {
     routes: {
       "!/home": "home",
       "!/about": "about",
-      "!/pricing": "pricing", 
+      "!/pricing": "pricing",
+      "!/where": "where", 
       "!/contact": "contact"
     },
 
     hide: function(callback) {
-      $(".page").animate({opacity: 0},250, callback).css({display: "none"});
+      $(".page").animate({opacity: 0},250, callback);
     },
     swap: function(page_id) {
       var p = page_id;
       this.hide( function() { 
+        console.log("none");
+        $(this).css({display: "none"});
         $(p).css({display: "block"}).animate({opacity: 1}, 250);
       });
     },
@@ -157,6 +174,9 @@ $(document).ready(function() {
     },
     contact: function() {
       this.swap("#contact");
+    },
+    where: function() {
+      this.swap("#where");
     },
   });
   
