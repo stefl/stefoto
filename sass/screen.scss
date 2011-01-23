@@ -14,6 +14,7 @@
 
 @import "compass/css3/gradient";
 @import "compass/css3/text-shadow";
+@import "compass/css3/box-shadow";
 
 body {
   background-color: #222;
@@ -98,6 +99,8 @@ nav {
     color: black;
     text-decoration: underline;
   }
+  
+  @include box-shadow(rgba(0,0,0,0.5), 0,0, 50px);
 }
 
 a {
@@ -157,4 +160,10 @@ a {
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
+}
+
+#profile_photo {
+  float: left;
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
 }

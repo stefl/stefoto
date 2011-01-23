@@ -544,12 +544,12 @@ body.two-col #content {
   overflow-x: hidden;
 }
 
-/* line 18, ../../sass/screen.scss */
+/* line 19, ../../sass/screen.scss */
 body {
   background-color: #222;
 }
 
-/* line 22, ../../sass/screen.scss */
+/* line 23, ../../sass/screen.scss */
 nav {
   background-color: black;
   opacity: 0.6;
@@ -562,56 +562,56 @@ nav {
   font-family: 'Raleway', arial, serif;
   text-align: center;
 }
-/* line 34, ../../sass/screen.scss */
+/* line 35, ../../sass/screen.scss */
 nav h1 {
   color: white;
   font-size: 14px;
   display: inline-block;
   margin-right: 2em;
 }
-/* line 39, ../../sass/screen.scss */
+/* line 40, ../../sass/screen.scss */
 nav h1 a {
   color: white;
   text-decoration: none;
   padding: 0.5em;
 }
-/* line 43, ../../sass/screen.scss */
+/* line 44, ../../sass/screen.scss */
 nav h1 a:hover {
   text-decoration: underline;
 }
-/* line 48, ../../sass/screen.scss */
+/* line 49, ../../sass/screen.scss */
 nav h2 {
   color: #aaa;
   font-size: 14px;
   display: inline-block;
   padding: 0.5em;
 }
-/* line 54, ../../sass/screen.scss */
+/* line 55, ../../sass/screen.scss */
 nav ul {
   font-size: 14px;
   display: inline-block;
 }
-/* line 57, ../../sass/screen.scss */
+/* line 58, ../../sass/screen.scss */
 nav ul li {
   display: inline-block;
 }
-/* line 59, ../../sass/screen.scss */
+/* line 60, ../../sass/screen.scss */
 nav ul li a {
   color: #ddd;
   padding: 0.5em;
   text-decoration: none;
 }
-/* line 63, ../../sass/screen.scss */
+/* line 64, ../../sass/screen.scss */
 nav ul li a:hover {
   text-decoration: underline;
 }
-/* line 66, ../../sass/screen.scss */
+/* line 67, ../../sass/screen.scss */
 nav ul li a.active {
   color: #ffe;
   text-decoration: underline;
 }
 
-/* line 75, ../../sass/screen.scss */
+/* line 76, ../../sass/screen.scss */
 .page {
   opacity: 0;
   display: none;
@@ -624,31 +624,35 @@ nav ul li a.active {
   font-family: 'Raleway', arial, serif;
   width: 320px;
   padding: 60px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 50px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 50px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.5) 0 0 50px 0;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 50px 0;
 }
-/* line 87, ../../sass/screen.scss */
+/* line 88, ../../sass/screen.scss */
 .page h1, .page h2 {
   font-size: 16px;
   margin-bottom: 1.5em;
   line-height: 24px;
 }
-/* line 92, ../../sass/screen.scss */
+/* line 93, ../../sass/screen.scss */
 .page p, .page li {
   font-size: 14px;
   margin-bottom: 1.5em;
   line-height: 18px;
 }
-/* line 97, ../../sass/screen.scss */
+/* line 98, ../../sass/screen.scss */
 .page a {
   color: black;
   text-decoration: underline;
 }
 
-/* line 103, ../../sass/screen.scss */
+/* line 106, ../../sass/screen.scss */
 a {
   color: #ff9900;
 }
 
-/* line 107, ../../sass/screen.scss */
+/* line 110, ../../sass/screen.scss */
 #left {
   position: absolute;
   z-index: 2;
@@ -659,7 +663,7 @@ a {
   cursor: w-resize;
 }
 
-/* line 117, ../../sass/screen.scss */
+/* line 120, ../../sass/screen.scss */
 #right {
   position: absolute;
   z-index: 2;
@@ -670,7 +674,7 @@ a {
   cursor: e-resize;
 }
 
-/* line 127, ../../sass/screen.scss */
+/* line 130, ../../sass/screen.scss */
 #prev_indicator {
   position: absolute;
   bottom: 10px;
@@ -685,7 +689,7 @@ a {
   background-repeat: no-repeat;
 }
 
-/* line 141, ../../sass/screen.scss */
+/* line 144, ../../sass/screen.scss */
 #next_indicator {
   position: absolute;
   bottom: 10px;
@@ -704,4 +708,11 @@ a {
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
+}
+
+/* line 165, ../../sass/screen.scss */
+#profile_photo {
+  float: left;
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
 }

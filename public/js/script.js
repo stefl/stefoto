@@ -1,3 +1,10 @@
+// Array Remove - By John Resig (MIT Licensed)
+Array.prototype.remove = function(from, to) {
+  var rest = this.slice((to || from) + 1 || this.length);
+  this.length = from < 0 ? this.length + from : from;
+  return this.push.apply(this, rest);
+};
+
 var Photos, Pages;
 
 $(document).ready(function() {
@@ -132,7 +139,15 @@ $(document).ready(function() {
     },
     animate: function() {
       this.animating = true;
-      this.img.stop(true).animate({opacity: 0}, 250, function() { $(this).attr("src", Photos.urls[Photos.frame]).aeImageResize({ height: $(window).height(), width: $(window).width() }).load(function() { $(this).animate({opacity: 1},250, function() { Photos.animating = false; }) })});
+      this.img.stop(true)
+        .animate({opacity: 0}, 250, 
+          function() { 
+            $(this).attr("src", Photos.urls[Photos.frame])
+            .aeImageResize({ height: $(window).height(), width: $(window).width() })
+            .error(function() { console.log("rescuing from 404"); Photos.urls.remove(Photos.frame); Photos.animate(); })
+            .load(function() { $(this).animate({opacity: 1},250, function() { Photos.animating = false; }) 
+          });
+        });
     }
   };
   
