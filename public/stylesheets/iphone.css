@@ -45,3 +45,7 @@ nav#main_navigation a {
 .page p, .page h1, .page h2, .page li {
   font-family: Helvetica, arial, serif !important;
 }
+/* line 41, ../../sass/iphone.scss */
+.page ul {
+  margin-left: 12px;
+}
