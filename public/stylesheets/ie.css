@@ -90,5 +90,5 @@ body.bp button {
 
 /* line 18, ../../sass/ie.scss */
 .page, nav#main_navigation {
-  font-family: Helvetica, arial, serif !important;
+  font-family: Helvetica, arial, sans-serif !important;
 }

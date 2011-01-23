@@ -559,7 +559,7 @@ nav {
   top: 0px;
   left: 0px;
   color: white;
-  font-family: 'Raleway', arial, serif;
+  font-family: 'Raleway', Helvetica, arial, sans-serif;
   text-align: center;
 }
 /* line 35, ../../sass/screen.scss */
@@ -621,7 +621,7 @@ nav ul li a.active {
   z-index: 5;
   background-color: rgba(255, 255, 255, 0.95);
   color: #111;
-  font-family: 'Raleway', arial, serif;
+  font-family: 'Raleway', Helvetica, arial, sans-serif;
   width: 320px;
   padding: 60px;
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 50px 0;
