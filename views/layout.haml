@@ -24,6 +24,10 @@
     %link{:href=>"/stylesheets/ie.css", :media=>"screen, projection", :rel=>"stylesheet", :type=>"text/css"}/
     \<![endif]-->
     
+    \<!--[if !IE]>-->
+    %link{:media=>"only screen and (max-width: 480px)", :rel=>"stylesheet", :type=>"text/css", :href=>"/stylesheets/iphone.css"}/
+    \<!--<![endif]-->
+    
   %body
     %nav#main_navigation
       %h1

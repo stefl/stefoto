@@ -1,0 +1,21 @@
+@import "blueprint";
+
+nav#main_navigation {
+  font-family: Helvetica, arial, serif !important;
+  font-size: 32px !important;
+  line-height: 32px;
+  padding: 0px;
+  h1, h2, a {
+  }
+  h2 {
+    padding: 0px;
+  }
+  height: 86px;
+  overflow: hidden;
+  position: relative;
+}
+
+.page
+{
+  top: 86px;
+}

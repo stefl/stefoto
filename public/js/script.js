@@ -79,7 +79,11 @@ $(document).ready(function() {
       this.element.disableTextSelect();
       this.animate();
     },
-    
+    goto: function(id) {
+      var image_url = _.detect(this.urls, function(url) { url.indexOf(id + "_")});
+      this.frame = this.urls.indexOf(image_url);
+      this.animate();
+    },
     next: function() {
       if(this.frame < this.urls.length-1) {
         this.preload(1);
@@ -131,19 +135,16 @@ $(document).ready(function() {
       $("#prev_indicator").stop().animate({opacity: 0.75},250, function(){ $(this).animate({opacity: 0},5000)});
     },
     resize: function() {
-			var imagewidth = this.img.naturalWidth;
-			var imageheight = this.img.naturalHeight;
-			var browserwidth = $(window).width();
-			var browserheight = $(window).height();
-			this.img.aeImageResize({ height: $(window).height(), width: $(window).width() });
+			this.img.aeImageResize({ height: $(window).height() - $("nav").height(), width: $(window).width() });
     },
     animate: function() {
       this.animating = true;
       this.img.stop(true)
         .animate({opacity: 0}, 250, 
           function() { 
+            parent.location.hash = '!/images/' + Photos.urls[Photos.frame].split("/").pop().split("_")[0];
             $(this).attr("src", Photos.urls[Photos.frame])
-            .aeImageResize({ height: $(window).height(), width: $(window).width() })
+            .aeImageResize({ height: $(window).height() - $("nav").height(), width: $(window).width() })
             .error(function() { console.log("rescuing from 404"); Photos.urls.remove(Photos.frame); Photos.animate(); })
             .load(function() { $(this).animate({opacity: 1},250, function() { Photos.animating = false; }) 
           });
@@ -163,9 +164,12 @@ $(document).ready(function() {
       "!/pricing": "pricing",
       "!/where": "where", 
       "!/contact": "contact", 
-      "!/philosophy": "philosophy"
+      "!/philosophy": "philosophy",
+      "!/images/:id": "image",
     },
-
+    image: function(id) {
+      var i = Photo.goto(id);
+    },
     hide: function(callback) {
       $(".page").animate({opacity: 0},250, callback).css({display: "none", left: -20000});
     },

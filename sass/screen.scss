@@ -29,9 +29,11 @@ nav {
   top: 0px;
   left: 0px;
   color: white;
-  font-family: 'Raleway', Helvetica, arial, sans-serif;
+  font-family: 'Raleway', Helvetica Neue, Helvetica, arial, sans-serif;
   text-align: center;
-
+  height: 28px;
+  vertical-align: bottom;
+  @include box-shadow(rgba(0,0,0,0.5), 0,0, 10px);
   h1 {
     color: white;
     font-size: 14px;
@@ -82,7 +84,7 @@ nav {
   z-index: 5;
   background-color: rgba(255,255,255,0.95);
   color: #111;
-  font-family: 'Raleway', Helvetica, arial, sans-serif;
+  font-family: 'Raleway', Helvetica Neue, Helvetica, arial, sans-serif;
   width: 320px;
   padding: 60px;
   h1, h2{
@@ -166,4 +168,8 @@ a {
   float: left;
   margin-right: 1.5em;
   margin-bottom: 1.5em;
+}
+
+#photos {
+  margin-top: 28px;
 }

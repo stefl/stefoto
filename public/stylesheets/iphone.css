@@ -1,0 +1,19 @@
+/* line 3, ../../sass/iphone.scss */
+nav#main_navigation {
+  font-family: Helvetica, arial, serif !important;
+  font-size: 32px !important;
+  line-height: 32px;
+  padding: 0px;
+  height: 86px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 10, ../../sass/iphone.scss */
+nav#main_navigation h2 {
+  padding: 0px;
+}
+
+/* line 19, ../../sass/iphone.scss */
+.page {
+  top: 86px;
+}
