@@ -89,6 +89,6 @@ body.bp button {
 }
 
 /* line 18, ../../sass/ie.scss */
-.page {
+.page, nav {
   font-family: Helvetica, arial, serif !important;
 }
