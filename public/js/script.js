@@ -31,7 +31,6 @@ $(document).ready(function() {
       
       $("#left").bind('click', function(event) {
           Photos.prev();
-          parent.location.hash = '!/home';
       });
       
       $("#left").bind('mousemove', function(event) {
@@ -44,7 +43,6 @@ $(document).ready(function() {
       
       $("#right").bind('click', function(event) {
           Photos.next();
-          parent.location.hash = '!/home';
       });
       
       $("nav").bind('mouseenter', function(event) { 
@@ -62,7 +60,6 @@ $(document).ready(function() {
           case 37: // left
           case 38: // up
             Photos.prev();
-            parent.location.hash = '!/home';
             event.stopPropagation();
             break;
           case 32: // space
@@ -70,7 +67,6 @@ $(document).ready(function() {
           case 39: // right
           case 40: // down
             Photos.next();
-            parent.location.hash = '!/home';
             event.stopPropagation();
             break;
         }
@@ -79,16 +75,24 @@ $(document).ready(function() {
       this.element.disableTextSelect();
       this.animate();
     },
-    goto: function(id) {
-      var image_url = _.detect(this.urls, function(url) { url.indexOf(id + "_")});
-      this.frame = this.urls.indexOf(image_url);
+    redirect: function(num) {
+      parent.location.hash = '#!/images/' + this.urls[num].split("/").pop().split("_")[0];
       this.animate();
+    },
+    goto: function(id) {
+      console.log("Goto ID: " + id);
+      var image_id = id;
+      var image_url = _.detect(this.urls, function(url) { return(url.indexOf(image_id + "_") != -1); });
+      console.log(image_url);
+      this.frame = this.urls.indexOf(image_url);
+      console.log("Goto frame: " + this.frame);
+      this.redirect(this.frame);
     },
     next: function() {
       if(this.frame < this.urls.length-1) {
         this.preload(1);
         this.frame = this.frame + 1;
-        this.animate();
+        this.redirect(this.frame);
       }
       else
       {
@@ -100,7 +104,7 @@ $(document).ready(function() {
       if(this.frame > 0) {
         this.preload(-1);
         this.frame = this.frame - 1;
-        this.animate();
+        this.redirect(this.frame);
       }
       else {
         this.last();
@@ -108,11 +112,11 @@ $(document).ready(function() {
     },
     last: function() {
       this.frame = this.urls.length-1;
-      this.animate();
+      this.redirect(this.frame);
     },
     first: function() {
       this.frame = 0;
-      this.animate();
+      this.redirect(this.frame);
     },
     preload: function(offset) {
       i = $("<img />").attr("src", this.urls[this.frame+offset]);
@@ -142,7 +146,6 @@ $(document).ready(function() {
       this.img.stop(true)
         .animate({opacity: 0}, 250, 
           function() { 
-            parent.location.hash = '!/images/' + Photos.urls[Photos.frame].split("/").pop().split("_")[0];
             $(this).attr("src", Photos.urls[Photos.frame])
             .aeImageResize({ height: $(window).height() - $("nav").height(), width: $(window).width() })
             .error(function() { console.log("rescuing from 404"); Photos.urls.remove(Photos.frame); Photos.animate(); })
@@ -168,7 +171,7 @@ $(document).ready(function() {
       "!/images/:id": "image",
     },
     image: function(id) {
-      var i = Photo.goto(id);
+      var i = Photos.goto(id);
     },
     hide: function(callback) {
       $(".page").animate({opacity: 0},250, callback).css({display: "none", left: -20000});
@@ -206,8 +209,9 @@ $(document).ready(function() {
   $.getJSON("/photos",
     function(data) {
       Photos.setup(data);
+      Backbone.history.start();
     });
   
   new Pages();
-  Backbone.history.start();
+  
 });
