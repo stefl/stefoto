@@ -1,71 +1,47 @@
-/*
-Syntax error: Undefined mixin 'box-sizing'.
-        on line 30 of /files/apps/photo/sass/iphone.scss, in `box-sizing'
-        from line 30 of /files/apps/photo/sass/iphone.scss
+@charset "UTF-8";
+/* line 4, ../../sass/iphone.scss */
+body {
+  zoom: 100%;
+}
 
-Backtrace:
-/files/apps/photo/sass/iphone.scss:30:in `box-sizing'
-/files/apps/photo/sass/iphone.scss:30
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/mixin_node.rb:62:in `perform!'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `map'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:317:in `perform!'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/rule_node.rb:191:in `perform!'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `map'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:317:in `perform!'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/root_node.rb:59:in `perform!'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/root_node.rb:37:in `perform'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/tree/root_node.rb:29:in `render'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/engine.rb:197:in `_render'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/engine.rb:169:in `render'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/haml/util.rb:294:in `silence_haml_warnings'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/lib/sass/engine.rb:169:in `render'
-/Library/Ruby/Gems/1.8/gems/compass-0.10.6/lib/compass/compiler.rb:103:in `compile'
-/Library/Ruby/Gems/1.8/gems/compass-0.10.6/lib/compass/logger.rb:43:in `red'
-/Library/Ruby/Gems/1.8/gems/compass-0.10.6/lib/compass/compiler.rb:102:in `compile'
-/Library/Ruby/Gems/1.8/gems/compass-0.10.6/lib/compass/compiler.rb:93:in `compile_if_required'
-/Library/Ruby/Gems/1.8/gems/compass-0.10.6/lib/compass/compiler.rb:84:in `run'
-/Library/Ruby/Gems/1.8/gems/compass-0.10.6/lib/compass/compiler.rb:82:in `each'
-/Library/Ruby/Gems/1.8/gems/compass-0.10.6/lib/compass/compiler.rb:82:in `run'
-/Library/Ruby/Gems/1.8/gems/compass-0.10.6/lib/compass/commands/watch_project.rb:92:in `recompile'
-/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `to_proc'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/vendor/fssm/lib/fssm/path.rb:71:in `call'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/vendor/fssm/lib/fssm/path.rb:71:in `run_callback'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/vendor/fssm/lib/fssm/path.rb:54:in `callback_action'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/vendor/fssm/lib/fssm/path.rb:34:in `update'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/vendor/fssm/lib/fssm/state/directory.rb:32:in `modified'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/vendor/fssm/lib/fssm/state/directory.rb:31:in `each'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/vendor/fssm/lib/fssm/state/directory.rb:31:in `modified'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/vendor/fssm/lib/fssm/state/directory.rb:16:in `refresh'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/vendor/fssm/lib/fssm/backends/fsevents.rb:15:in `add_handler'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/vendor/fssm/lib/fssm/backends/fsevents.rb:14:in `each'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/vendor/fssm/lib/fssm/backends/fsevents.rb:14:in `add_handler'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/vendor/fssm/lib/fssm/backends/rubycocoa/fsevents.rb:107:in `call'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/vendor/fssm/lib/fssm/backends/rubycocoa/fsevents.rb:107:in `initialize'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/vendor/fssm/lib/fssm/backends/fsevents.rb:27:in `call'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/vendor/fssm/lib/fssm/backends/fsevents.rb:27:in `CFRunLoopRun'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/vendor/fssm/lib/fssm/backends/fsevents.rb:27:in `run'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/vendor/fssm/lib/fssm/monitor.rb:24:in `run'
-/Library/Ruby/Gems/1.8/gems/haml-3.0.25/vendor/fssm/lib/fssm.rb:17:in `monitor'
-/Library/Ruby/Gems/1.8/gems/compass-0.10.6/lib/compass/commands/watch_project.rb:61:in `perform'
-/Library/Ruby/Gems/1.8/gems/compass-0.10.6/lib/compass/commands/base.rb:18:in `execute'
-/Library/Ruby/Gems/1.8/gems/compass-0.10.6/lib/compass/commands/project_base.rb:19:in `execute'
-/Library/Ruby/Gems/1.8/gems/compass-0.10.6/lib/compass/exec/sub_command_ui.rb:38:in `perform!'
-/Library/Ruby/Gems/1.8/gems/compass-0.10.6/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Library/Ruby/Gems/1.8/gems/compass-0.10.6/bin/compass:26
-/usr/bin/compass:19:in `load'
-/usr/bin/compass:19
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined mixin 'box-sizing'.\A         on line 30 of /files/apps/photo/sass/iphone.scss, in `box-sizing'\A         from line 30 of /files/apps/photo/sass/iphone.scss"; }
+/* line 8, ../../sass/iphone.scss */
+nav#main_navigation {
+  font-family: Helvetica, arial, serif !important;
+  font-size: 32px !important;
+  line-height: 32px;
+  padding: 0px;
+  height: 86px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 15, ../../sass/iphone.scss */
+nav#main_navigation h2 {
+  padding: 0px;
+}
+/* line 18, ../../sass/iphone.scss */
+nav#main_navigation a {
+  padding: 4px;
+}
+
+/* line 26, ../../sass/iphone.scss */
+#photos {
+  margin-top: 0px;
+}
+
+/* line 30, ../../sass/iphone.scss */
+.page {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  top: 86px;
+  left: 0px !important;
+  margin: 0px !important;
+  padding: 12px !important;
+  width: 100%;
+  font-family: Helvetica, arial, serif !important;
+}
+/* line 38, ../../sass/iphone.scss */
+.page p, .page h1, .page h2, .page li {
+  font-family: Helvetica, arial, serif !important;
+}
