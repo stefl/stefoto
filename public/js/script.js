@@ -77,15 +77,13 @@ $(document).ready(function() {
     },
     redirect: function(num) {
       parent.location.hash = '#!/images/' + this.urls[num].split("/").pop().split("_")[0];
+      $(".page").animate({opacity: 0},250);
       this.animate();
     },
     goto: function(id) {
-      console.log("Goto ID: " + id);
       var image_id = id;
       var image_url = _.detect(this.urls, function(url) { return(url.indexOf(image_id + "_") != -1); });
-      console.log(image_url);
       this.frame = this.urls.indexOf(image_url);
-      console.log("Goto frame: " + this.frame);
       this.redirect(this.frame);
     },
     next: function() {
