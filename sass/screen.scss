@@ -57,10 +57,14 @@ nav {
     li {
       display: inline-block;
       a {
-        color: white;
+        color: #ddd;
         padding: 0.5em;
         text-decoration: none;
         &:hover {
+          text-decoration: underline;
+        }
+        &.active {
+          color: #ffe;
           text-decoration: underline;
         }
       }
@@ -119,4 +123,39 @@ a {
   top: 0;
   right: 0;
   cursor: e-resize;
+}
+
+#prev_indicator{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 32px;
+  height: 64px;
+  display: block;
+  z-index: 1;
+  border: red;
+  opacity: 0.75;
+  background-image: url(/sw_arrow_indicator.png);
+  background-repeat: no-repeat;
+}
+
+#next_indicator{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 32px;
+  height: 64px;
+  display: block;
+  z-index: 1;
+  border: red;
+  opacity: 0.75;
+  background-image: url(/sw_arrow_indicator.png);
+  background-repeat: no-repeat;
+  
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
 }

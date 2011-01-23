@@ -28,11 +28,11 @@ $(document).ready(function() {
       });
       
       $("#left").bind('mousemove', function(event) {
-          Photos.leftIndicator();
+          Photos.prevIndicator();
       });
       
       $("#right").bind('mousemove', function(event) {
-          Photos.rightIndicator();
+          Photos.nextIndicator();
       });
       
       $("#right").bind('click', function(event) {
@@ -49,7 +49,6 @@ $(document).ready(function() {
       });
       
       $(document).bind('keyup',function(event) {
-        console.log(event.keyCode);
         switch(event.which) {
           case 8: // backspace
           case 33: // page up
@@ -117,24 +116,23 @@ $(document).ready(function() {
           Photos.prev();
         }
       }
+    }  ,
+    nextIndicator: function() {
+      $("#next_indicator").stop().animate({opacity: 0.75},250, function(){ $(this).animate({opacity: 0},5000)});
     },
-    leftIndicator: function() {
-      
-    },
-    rightIndicator: function() {
-      
+    prevIndicator: function() {
+      $("#prev_indicator").stop().animate({opacity: 0.75},250, function(){ $(this).animate({opacity: 0},5000)});
     },
     resize: function() {
 			var imagewidth = this.img.naturalWidth;
 			var imageheight = this.img.naturalHeight;
 			var browserwidth = $(window).width();
 			var browserheight = $(window).height();
-			console.log("resize");
 			this.img.aeImageResize({ height: $(window).height(), width: $(window).width() });
     },
     animate: function() {
       this.animating = true;
-      this.img.stop(true).animate({opacity: 0}, 250, function() { $(this).attr("src", Photos.urls[Photos.frame]).aeImageResize({ height: $(window).height(), width: $(window).width() }).load(function() { console.log("end animate"); $(this).animate({opacity: 1},250, function() { Photos.animating = false; }) })});
+      this.img.stop(true).animate({opacity: 0}, 250, function() { $(this).attr("src", Photos.urls[Photos.frame]).aeImageResize({ height: $(window).height(), width: $(window).width() }).load(function() { $(this).animate({opacity: 1},250, function() { Photos.animating = false; }) })});
     }
   };
   
@@ -157,13 +155,15 @@ $(document).ready(function() {
     },
     swap: function(page_id) {
       var p = page_id;
+      $("nav ul li a").removeClass("active");
+      $(page_id + "_show").addClass("active");
       this.hide( function() { 
-        console.log("none");
         $(this).css({display: "none"});
         $(p).css({display: "block"}).animate({opacity: 1}, 250);
       });
     },
     home: function() {
+      $("nav ul li a").removeClass("active");
       $(".page").animate({opacity: 0},250);
     },
     about: function() {
@@ -177,7 +177,7 @@ $(document).ready(function() {
     },
     where: function() {
       this.swap("#where");
-    },
+    }
   });
   
   $.getJSON("/photos",
