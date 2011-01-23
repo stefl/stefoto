@@ -1,0 +1,5 @@
+sinatra
+sinatra-jsonp
+haml
+nokogiri
+dalli
