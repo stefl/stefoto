@@ -17,13 +17,17 @@ nav#main_navigation {
 nav#main_navigation h2 {
   padding: 0px;
 }
+/* line 17, ../../sass/iphone.scss */
+nav#main_navigation a {
+  padding: 0px;
+}
 
-/* line 22, ../../sass/iphone.scss */
+/* line 25, ../../sass/iphone.scss */
 #photos {
   margin-top: 0px;
 }
 
-/* line 26, ../../sass/iphone.scss */
+/* line 29, ../../sass/iphone.scss */
 .page {
   top: 86px;
 }
