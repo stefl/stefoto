@@ -147,7 +147,7 @@ $(document).ready(function() {
             $(this).attr("src", Photos.urls[Photos.frame])
             .aeImageResize({ height: $(window).height() - $("nav").height(), width: $(window).width() })
             .error(function() { console.log("rescuing from 404"); Photos.urls.remove(Photos.frame); Photos.animate(); })
-            .load(function() { $(this).animate({opacity: 1},250, function() { Photos.animating = false; }) 
+            .load(function() { Photos.resize(); $(this).animate({opacity: 1},250, function() { Photos.animating = false; }) 
           });
         });
     }
