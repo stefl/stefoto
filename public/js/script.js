@@ -73,6 +73,7 @@ $(document).ready(function() {
       });
       
       this.element.disableTextSelect();
+      this.resize();
       this.animate();
     },
     redirect: function(num) {
@@ -145,9 +146,8 @@ $(document).ready(function() {
         .animate({opacity: 0}, 250, 
           function() { 
             $(this).attr("src", Photos.urls[Photos.frame])
-            .aeImageResize({ height: $(window).height() - $("nav").height(), width: $(window).width() })
             .error(function() { console.log("rescuing from 404"); Photos.urls.remove(Photos.frame); Photos.animate(); })
-            .load(function() { Photos.resize(); $(this).animate({opacity: 1},250, function() { Photos.animating = false; }) 
+            .load(function() { $(this).delay(100).animate({opacity: 1},250, function() { Photos.animating = false; }) 
           });
         });
     }

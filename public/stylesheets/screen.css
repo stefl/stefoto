@@ -547,9 +547,10 @@ body.two-col #content {
 /* line 19, ../../sass/screen.scss */
 body {
   background-color: #222;
+  overflow: hidden;
 }
 
-/* line 23, ../../sass/screen.scss */
+/* line 24, ../../sass/screen.scss */
 nav {
   background-color: black;
   opacity: 0.6;
@@ -568,56 +569,56 @@ nav {
   -o-box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px 0;
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px 0;
 }
-/* line 37, ../../sass/screen.scss */
+/* line 38, ../../sass/screen.scss */
 nav h1 {
   color: white;
   font-size: 14px;
   display: inline-block;
   margin-right: 2em;
 }
-/* line 42, ../../sass/screen.scss */
+/* line 43, ../../sass/screen.scss */
 nav h1 a {
   color: white;
   text-decoration: none;
   padding: 0.5em;
 }
-/* line 46, ../../sass/screen.scss */
+/* line 47, ../../sass/screen.scss */
 nav h1 a:hover {
   text-decoration: underline;
 }
-/* line 51, ../../sass/screen.scss */
+/* line 52, ../../sass/screen.scss */
 nav h2 {
   color: #aaa;
   font-size: 14px;
   display: inline-block;
   padding: 0.5em;
 }
-/* line 57, ../../sass/screen.scss */
+/* line 58, ../../sass/screen.scss */
 nav ul {
   font-size: 14px;
   display: inline-block;
 }
-/* line 60, ../../sass/screen.scss */
+/* line 61, ../../sass/screen.scss */
 nav ul li {
   display: inline-block;
 }
-/* line 62, ../../sass/screen.scss */
+/* line 63, ../../sass/screen.scss */
 nav ul li a {
   color: #ddd;
   padding: 0.5em;
   text-decoration: none;
 }
-/* line 66, ../../sass/screen.scss */
+/* line 67, ../../sass/screen.scss */
 nav ul li a:hover {
   text-decoration: underline;
 }
-/* line 69, ../../sass/screen.scss */
+/* line 70, ../../sass/screen.scss */
 nav ul li a.active {
   color: #ffe;
   text-decoration: underline;
 }
 
-/* line 78, ../../sass/screen.scss */
+/* line 79, ../../sass/screen.scss */
 .page {
   opacity: 0;
   display: none;
@@ -635,30 +636,30 @@ nav ul li a.active {
   -o-box-shadow: rgba(0, 0, 0, 0.5) 0 0 50px 0;
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 50px 0;
 }
-/* line 90, ../../sass/screen.scss */
+/* line 91, ../../sass/screen.scss */
 .page h1, .page h2 {
   font-size: 16px;
   margin-bottom: 1.5em;
   line-height: 24px;
 }
-/* line 95, ../../sass/screen.scss */
+/* line 96, ../../sass/screen.scss */
 .page p, .page li {
   font-size: 14px;
   margin-bottom: 1.5em;
   line-height: 18px;
 }
-/* line 100, ../../sass/screen.scss */
+/* line 101, ../../sass/screen.scss */
 .page a {
   color: black;
   text-decoration: underline;
 }
 
-/* line 108, ../../sass/screen.scss */
+/* line 109, ../../sass/screen.scss */
 a {
   color: #ff9900;
 }
 
-/* line 112, ../../sass/screen.scss */
+/* line 113, ../../sass/screen.scss */
 #left {
   position: absolute;
   z-index: 2;
@@ -669,7 +670,7 @@ a {
   cursor: w-resize;
 }
 
-/* line 122, ../../sass/screen.scss */
+/* line 123, ../../sass/screen.scss */
 #right {
   position: absolute;
   z-index: 2;
@@ -680,7 +681,7 @@ a {
   cursor: e-resize;
 }
 
-/* line 132, ../../sass/screen.scss */
+/* line 133, ../../sass/screen.scss */
 #prev_indicator {
   position: absolute;
   bottom: 10px;
@@ -695,7 +696,7 @@ a {
   background-repeat: no-repeat;
 }
 
-/* line 146, ../../sass/screen.scss */
+/* line 147, ../../sass/screen.scss */
 #next_indicator {
   position: absolute;
   bottom: 10px;
@@ -716,14 +717,14 @@ a {
   -ms-filter: "FlipH";
 }
 
-/* line 167, ../../sass/screen.scss */
+/* line 168, ../../sass/screen.scss */
 #profile_photo {
   float: left;
   margin-right: 1.5em;
   margin-bottom: 1.5em;
 }
 
-/* line 173, ../../sass/screen.scss */
+/* line 174, ../../sass/screen.scss */
 #photos {
   margin-top: 28px;
 }
